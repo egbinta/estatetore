@@ -1,13 +1,213 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+.btnPrimary {
+  --bs-btn-color: #fff;
+  --bs-btn-bg: #38b6ff !important;
+  --bs-btn-border-color: #38b6ff !important;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #38b6ff !important;
+  --bs-btn-hover-border-color: #38b6ff !important;
+  --bs-btn-focus-shadow-rgb: 49, 132, 253;
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: #38b6ff !important;
+  --bs-btn-active-border-color: #38b6ff !important;
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --bs-btn-disabled-color: #fff;
+  --bs-btn-disabled-bg: #38b6ff !important;
+  --bs-btn-disabled-border-color: #38b6ff !important;
+}
+.linkStyle {
+  font-size: 16px;
+  font-weight: 600;
+  color: rgb(61, 61, 58);
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.linkStyle:hover {
+  border-bottom: 2px solid #38b6ff;
+  color: #38b6ff;
+  padding-bottom: 7px;
+  transition: all 0.02s ease-in-out;
+}
+/* banner styles */
+.bannerText {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 3;
+}
+
+@media (max-width: 576px) {
+  .bannerText {
+    top: 45%;
+  }
+}
+
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 400px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.26);
+  z-index: 2;
+  cursor: pointer;
+}
+.buyhomeImage {
+  width: 100%;
+  height: 400px;
+  position: relative;
+}
+
+/* Card styling */
+.cardContainer {
+  transform: translateX(19px);
+}
+
+@media (min-width: 992px) {
+  .cardContainer {
+    transform: translateX(0px);
+  }
+}
+
+/* Loader style */
+
+.lds-dual-ring {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+}
+.lds-dual-ring:after {
+  content: " ";
+  display: block;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border-radius: 50%;
+  border: 6px solid #1c1a1a;
+  border-color: #272323 transparent #292323 transparent;
+  animation: lds-dual-ring 1.2s linear infinite;
+}
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.loader-container {
+  min-width: 100%;
+  height: 90vh;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.loader-container .loader-text {
+  margin-top: 130px;
+  margin-left: -60px;
+  overflow: hidden;
+}
+
+/* Footer styling */
+.footer-bg {
+  background-color: rgb(53, 51, 51);
+}
+
+::-webkit-input-placeholder {
+  /* Edge */
+  color: white !important;
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer */
+  color: white !important;
+}
+
+::placeholder {
+  color: white !important;
+}
+.useful-links {
+  text-decoration: none;
+}
+.useful-links:hover {
+  border-bottom: 1px solid aliceblue;
+}
+.list-style {
+  list-style: none;
+}
+.footer-bottom-bg {
+  background-color: rgb(26, 25, 25);
+}
+
+@media (max-width: 768px) {
+  .signup-form {
+    flex-direction: column !important;
+  }
+  .mail-input {
+    width: 100% !important;
+    background: transparent !important;
+    margin: 15px 0px 15px 0px !important;
+  }
+}
+
+/* Image slider style */
+.carousel-height {
+  height: 480px;
+}
+
+@media (max-width: 768px) {
+  .carousel-height {
+    height: 330px;
+  }
+}
+
+/* sub banner style */
+.sub-overlay {
+  position: absolute;
+  width: 100%;
+  height: 300px;
+  transform: translateY(459px);
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.34);
+  z-index: 1;
+  cursor: pointer;
+}
+.sub-banner-height {
+  height: 300px;
+}
+.sub-banner-text {
+  display: flex;
+  justify-content: center;
+  transform: translateY(-200px);
+  margin-bottom: -28px;
+  z-index: 2;
+}
+.sub-banner-text {
+  position: absolute;
+  top: 140%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 3;
 }
