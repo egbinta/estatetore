@@ -1,6 +1,5 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 import ImageCard from "../components/ImageCard";
 import Loader from "../components/Loader";
@@ -17,12 +16,12 @@ const SearchPage = () => {
 
   const purpose = query.get("purpose") || "for-rent";
   const rentFrequency = query.get("rentFrequency") || "yearly";
-  const minPrice = query.get("minPrice") || "0";
-  const maxPrice = query.get("maxPrice") || "1000000";
-  const roomsMin = query.get("roomsMin") || "0";
-  const bathsMin = query.get("bathsMin") || "0";
+  // const minPrice = query.get("minPrice") || "0";
+  // const maxPrice = query.get("maxPrice") || "1000000";
+  // const roomsMin = query.get("roomsMin") || "0";
+  // const bathsMin = query.get("bathsMin") || "0";
   const sort = query.get("sort") || "price-desc";
-  const areaMax = query.get("areaMax") || "35000";
+  // const areaMax = query.get("areaMax") || "35000";
   const locationExternalIDs = query.get("locationExternalIDs") || "5002";
   const categoryExternalID = query.get("categoryExternalID") || "4";
 
@@ -53,7 +52,8 @@ const SearchPage = () => {
       .catch((error) => {
         console.log(error);
       });
-  }, [purpose]);
+  }, [purpose, categoryExternalID, locationExternalIDs, sort, rentFrequency]);
+
   console.log(properties);
   if (loading) {
     return <Loader />;

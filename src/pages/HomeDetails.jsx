@@ -13,7 +13,6 @@ import Loader from "../components/Loader";
 
 const HomeDetails = () => {
   const [propertyDetails, setpropertyDetails] = useState();
-  const [loading, setLoading] = useState(false);
 
   const externalValue = useParams();
   const externalId = externalValue.externalId;

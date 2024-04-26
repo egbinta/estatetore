@@ -1,12 +1,10 @@
 import React from "react";
-import { useState, useEffect, useContext } from "react";
+import { useState, useEffect } from "react";
 import BannerForRent from "../components/BannerForRent";
 import BannerForSale from "../components/BannerForSale";
 import ImageCard from "../components/ImageCard";
 import Loader from "../components/Loader";
 import axios from "axios";
-import SubBanner from "../components/SubBanner";
-import AppContext from "../context/app-context";
 
 const Index = () => {
   const [propertyForRent, setPropertyForRent] = useState([]);

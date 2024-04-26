@@ -32,7 +32,7 @@ const ImageCard = ({ properties }) => {
                     </div>
                     <div className="ml-4 fw-bold text-muted">
                       ${millify(property.price)}
-                      {property.purpose == "for-rent" &&
+                      {property.purpose === "for-rent" &&
                         `/${property.rentFrequency}`}
                     </div>
                   </div>
