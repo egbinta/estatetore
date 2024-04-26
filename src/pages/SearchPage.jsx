@@ -33,7 +33,7 @@ const SearchPage = () => {
         params: {
           locationExternalIDs: locationExternalIDs,
           purpose: purpose,
-          hitsPerPage: "2",
+          hitsPerPage: "8",
           page: "0",
           lang: "en",
           sort: sort,
